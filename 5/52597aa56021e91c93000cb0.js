@@ -14,3 +14,7 @@ console.log(moveZeros(["a", false, 1, 2, 0, 1, 0, 1, 0, 3, 0, 1]));
 var moveZeros = function (arr) {
   return [...arr.filter((n) => n !== 0), ...arr.filter((n) => n === 0)];
 };
+
+function moveZeros(arr) {
+  return arr.sort((a, b) => (b === 0 ? -1 : 0));
+}
